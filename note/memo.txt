@@ -1,0 +1,26 @@
+global property
+  process
+
+core library
+  fs path
+
+modules export
+  module.exports = function(){};
+
+module import
+  var myModule = require('./myModule'); 
+
+  prefix with './'' find local module
+  Node will first look in the core modules and then in the node_modules directory where the package is located.
+
+The http.get() method is a shortcut for simple GET requests, use it to  
+simplify your solution. The first argument to http.get() can be the URL  
+you want to GET; provide a callback as the second argument.  
+
+Unlike other callback functions, this one has the signature:  
+
+  function callback (response) { /* ... */ }  
+
+Where the response object is a Node Stream object. 
+You can treat Node Streams as objects that emit events. 
+The three events that are of most interest are: "data", "error" and "end".

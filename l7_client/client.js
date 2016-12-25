@@ -3,9 +3,9 @@ var http = require('http');
 var url = process.argv[2];
 
 function callback(response) {
-  response.setEncoding("utf8");
-  response.on("data", function(data) {
-    console.log(data);
+  // response.setEncoding("utf8");
+  response.on("data", function(buffer) {
+    console.log(buffer.toString());
   });
 
   response.on("error", function(error){
