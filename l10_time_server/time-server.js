@@ -1,6 +1,6 @@
 var net = require('net');
 
-var portNumber = process.argv[2];
+var port = process.argv[2];
 
 function fullZero(d) {
   return (d >= 10 ? '' : '0') + d;
@@ -19,7 +19,7 @@ function printTime(socket) {
 
 var server = net.createServer(printTime);
 
-server.listen(portNumber);
+server.listen(port);
 
 //SOLUTION
 // var net = require('net')

@@ -2,7 +2,7 @@ global property
   process
 
 core library
-  fs path
+  fs path net http
 
 modules export
   module.exports = function(){};
@@ -24,3 +24,12 @@ Unlike other callback functions, this one has the signature:
 Where the response object is a Node Stream object. 
 You can treat Node Streams as objects that emit events. 
 The three events that are of most interest are: "data", "error" and "end".
+
+request is used to fetch properties, 
+such as the header and query-string from the request 
+while response is for sending data to the client, 
+both headers and body.
+
+Both request and response are also Node streams! 
+Which means that you can use the streaming abstractions 
+to send and receive data if they suit your use-case.  
