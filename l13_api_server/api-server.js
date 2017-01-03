@@ -48,7 +48,11 @@ var server = http.createServer(function(req, res){
     code = 400;
   }
 
-  res.writeHead(code, { 'Content-Type': 'application/json' });
+  if (code >= 400) {
+    res.writeHead(code);
+  } else {
+    res.writeHead(code, { 'Content-Type': 'application/json' });
+  }
 
   res.end(JSON.stringify(respond));
 
